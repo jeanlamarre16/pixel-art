@@ -8,20 +8,20 @@
     </head>
 
     <body>
-        <div class="div-grille">
-            <p>Entrez les paramêtres nécessaires à la construction de votre grille</p>
+        <div class="div-saisie">
+            <p class="texte">Entrez les paramêtres nécessaires à la construction de votre grille</p>
             <p><input type ="number" placeholder="nombre de lignes (entre 2 et 20)" min="2" max="20" class="nbLignes"></p>
             <p><input type ="number" placeholder="nombre de colonnes (entre 2 et 20)" min="2" max="20" class="nbColonnes"></p>
-            <p id="generer-grille">Générer</p>
+            <p id="grid-generator">Générer Tableau</p>
         </div>
   
-        <div id="palette">
-            <div class="green" onclick="pickColor('green')" ></div>
-            <div class="black" onclick="pickColor('black')" ></div>
-            <div class="gray" onclick="pickColor('tomato')" ></div>
-            <div class="pink" onclick="pickColor('pink')" ></div>
-            <div class="cyan" onclick="pickColor('cyan')" ></div>
-            <div class="white" onclick="pickColor('white')" ></div>
+        <div id="div-palette">
+            <div class="green" onclick="pickColor('green')"> </div>
+            <div class="black" onclick="pickColor('black')"> </div>
+            <div class="gray" onclick="pickColor('gray')"> </div>
+            <div class="pink" onclick="pickColor('pink')"> </div>
+            <div class="cyan" onclick="pickColor('cyan')"> </div>
+            <div class="white" onclick="pickColor('white')"> </div>
         </div>
 
         <div id="div-tableau">
