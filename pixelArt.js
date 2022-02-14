@@ -1,4 +1,3 @@
-
 const bouton = document.getElementById('generer-grille');
 const palette = document.getElementById("palette");
 let grille = document.querySelector('#grille-tableau');
@@ -12,13 +11,13 @@ bouton.addEventListener('click', function () {
 		createTable();
 		bouton.textContent = 'Reset';
 		inputLignes.setAttribute('disabled', '');
-		inputColonnes.removeAttribute('disabled', '');
+		inputColonnes.setAttribute('disabled', '');
 		palette.style.visibility="visible";
 	} else  {
 		resetTable();
 		bouton.textContent=genererGrille;
-		inputLignes.setAttribute("disabled", "false");
-		inputColonnes.setAttribute("disabled", "false");
+		inputLignes.removeAttribute("disabled");
+		inputColonnes.removeAttribute("disabled");
 		palette.style.visibility="hidden";
 	}	
 })
