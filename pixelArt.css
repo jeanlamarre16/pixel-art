@@ -1,0 +1,76 @@
+
+.div-grille2 {
+	display: flex;
+	width: 50%;
+	flex-wrap : wrap;
+	align-content: stretch;
+}
+
+table {
+	border: 3px solid gray;
+	border-collapse: collapse;
+}
+
+#generer-grille, #reset-grille {
+	border: 2px solid white;
+	display: inline-block;
+	padding: 2px 10px;
+	background: gray;
+	font-size: 25px;
+	font-weight: bolder;
+	cursor: pointer;
+	color : white;	
+}
+
+input {
+	width : 30%;
+}
+
+td {
+	border: 0.5px solid gray;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+#palette div {
+	border : .5px solid black;
+	height: 20px;
+	width: 20px;
+}
+
+#palette {
+	width: 200px;
+	display: flex;
+	gap: 4px;
+	margin: 60px 10px 5px 0;
+	cursor: pointer;
+	visibility: hidden;
+}
+
+.white {
+	background: rgb(255, 255, 255);
+}
+
+.blue {
+	background: rgba(194, 66, 245, 0.397);
+}
+
+.gray {
+	background: rgb(30, 30, 30);
+}
+
+.cyan {
+	background: cyan;
+}
+
+.pink {
+	background: pink;
+}
+.green {
+	background: green;
+}
+
+.black {
+	background: black;
+}
