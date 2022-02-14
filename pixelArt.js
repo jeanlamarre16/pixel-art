@@ -6,22 +6,16 @@ let grille = document.querySelector('#grille-tableau');
 let  inputLignes = document.querySelector('.nbLignes');
 let  inputColonnes = document.querySelector('.nbColonnes');
 
-
-
 bouton.addEventListener('click', function () {
 	let genererGrille = "Générer";
 	if(bouton.textContent === genererGrille) {
-		bouton.textContent = 'Reset';
 		createTable();
-		console.log('create');
 		bouton.textContent = 'Reset';
 		inputLignes.setAttribute('disabled', '');
 		inputColonnes.removeAttribute('disabled', '');
 		palette.style.visibility="visible";
 	} else  {
-		console.log('reset');
 		resetTable();
-		
 		bouton.textContent=genererGrille;
 		inputLignes.setAttribute("disabled", "false");
 		inputColonnes.setAttribute("disabled", "false");
