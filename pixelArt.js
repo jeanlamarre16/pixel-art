@@ -28,11 +28,11 @@ bouton.addEventListener('click', function () {
 })
 
 function controlerSaisie() {
-	if (inputLignes.value < 2 || inputLignes.value > 20 || inputLignes === " " ) {
+	if (inputLignes.value < 2 || inputLignes.value > 30 || inputLignes === " " ) {
 		inputLignes.value = " ";
 		inputLignes.focus();
 		return false;
-	} else if (inputColonnes.value < 2 || inputColonnes.value > 20  || inputColonnes === " ") {
+	} else if (inputColonnes.value < 2 || inputColonnes.value > 60  || inputColonnes === " ") {
 		inputColonnes.value = " ";
 		inputColonnes.focus();
 		return false;
