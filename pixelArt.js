@@ -1,23 +1,23 @@
 
-const bouton = document.getElementById('grid-generator');
-const palette = document.getElementById("div-palette");
+const bouton = document.querySelector('.btn-generator');
+const palette = document.querySelector("#div-palette");
 let divTableau = document.querySelector('#div-tableau');
-
 let  inputLignes = document.querySelector('.nbLignes');
 let  inputColonnes = document.querySelector('.nbColonnes');
 
-bouton.addEventListener('click', function () {
-	let genererdivTableau = "Générer Tableau";
+bouton.addEventListener('click', function () {	
 	if(controlerSaisie()) {
-		if(bouton.textContent === genererdivTableau) {
+		if(bouton.classList == 'btn-generator') {
 			createTable();
-			bouton.textContent = 'Reset';
+			bouton.classList.toggle('btn-generator');
+			bouton.textContent = 'Réinitialiser';
 			inputLignes.setAttribute('disabled', '');
 			inputColonnes.setAttribute('disabled', '');
 			palette.style.visibility="visible";
-		} else  {
+		} else {
 			resetTable();
-			bouton.textContent=genererdivTableau;
+			bouton.classList.toggle('btn-generator');
+			bouton.textContent="Générer le tableau";
 			inputLignes.removeAttribute("disabled", "");
 			inputColonnes.removeAttribute("disabled", "");
 			palette.style.visibility="hidden";
