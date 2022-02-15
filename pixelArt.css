@@ -3,6 +3,7 @@
 	padding : 0;
 }
 
+<<<<<<< HEAD
 body {
 	width: 800px;
 	margin : 0 auto;
@@ -10,6 +11,11 @@ body {
 
 .texte {
  font-size: 18px;
+=======
+table {
+	border: 3px solid gray;
+	border-collapse: collapse;
+>>>>>>> da0652ec0b851499a0c0334ad475d88300b8af69
 }
 
 .div-saisie {
@@ -97,7 +103,7 @@ td {
 }
 
 .blue {
-	background: rgba(194, 66, 245, 0.397);
+	background: blue;
 }
 
 .gray {
