@@ -3,7 +3,6 @@
 	padding : 0;
 }
 
-<<<<<<< HEAD
 body {
 	width: 800px;
 	margin : 0 auto;
@@ -11,11 +10,6 @@ body {
 
 .texte {
  font-size: 18px;
-=======
-table {
-	border: 3px solid gray;
-	border-collapse: collapse;
->>>>>>> da0652ec0b851499a0c0334ad475d88300b8af69
 }
 
 .div-saisie {
@@ -40,7 +34,7 @@ input {
 }
 
 input:invalid {
-	border : 2px solid red;
+	border : 1px solid red;
 }
 
 input:valid {
@@ -81,14 +75,14 @@ table {
 	padding: 2px 10px;
 	background: gray;
 	font-size: 18px;
-	color : rgba(0, 0, 0, 0.685);	
+	color : white;	
 	transition: ease-in-out 0.3s;
 	text-decoration: none;
 	border-radius: 5px;
 }
 
 .div-saisie a:hover {
-	color: white;
+	color: rgba(0, 0, 0, 0.685);
 }
 
 td {
@@ -103,7 +97,7 @@ td {
 }
 
 .blue {
-	background: blue;
+	background: rgba(194, 66, 245, 0.397);
 }
 
 .gray {

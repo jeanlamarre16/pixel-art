@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 const bouton = document.querySelector('.btn-generator');
 const palette = document.querySelector("#div-palette");
@@ -26,30 +25,6 @@ bouton.addEventListener('click', function () {
 	} else  {
 		controlerSaisie();
 	}
-=======
-const bouton = document.getElementById('generer-grille');
-const palette = document.getElementById("palette");
-let grille = document.querySelector('#grille-tableau');
-
-let  inputLignes = document.querySelector('.nbLignes');
-let  inputColonnes = document.querySelector('.nbColonnes');
-
-bouton.addEventListener('click', function () {
-	let genererGrille = "Générer";
-	if(bouton.textContent === genererGrille) {
-		createTable();
-		bouton.textContent = 'Reset';
-		inputLignes.setAttribute('disabled', '');
-		inputColonnes.setAttribute('disabled', '');
-		palette.style.visibility="visible";
-	} else  {
-		resetTable();
-		bouton.textContent=genererGrille;
-		inputLignes.removeAttribute("disabled");
-		inputColonnes.removeAttribute("disabled");
-		palette.style.visibility="hidden";
-	}	
->>>>>>> da0652ec0b851499a0c0334ad475d88300b8af69
 })
 
 function controlerSaisie() {
