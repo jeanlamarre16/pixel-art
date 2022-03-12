@@ -2,25 +2,27 @@
 const bouton = document.querySelector('.btn-generator');
 const palette = document.querySelector("#div-palette");
 let divTableau = document.querySelector('#div-tableau');
-let  inputLignes = document.querySelector('.nbLignes');
-let  inputColonnes = document.querySelector('.nbColonnes');
+let  linesInput = document.querySelector('.nbLignes');
+let  columnsInput = document.querySelector('.nbColonnes');
 
-bouton.addEventListener('click', function () {	
+bouton.addEventListener('click', function () {
 	if(controlerSaisie()) {
 		if(bouton.classList == 'btn-generator') {
 			createTable();
 			bouton.classList.toggle('btn-generator');
 			bouton.textContent = 'Réinitialiser';
-			inputLignes.setAttribute('disabled', '');
-			inputColonnes.setAttribute('disabled', '');
+			linesInput.setAttribute('disabled', '');
+			columnsInput.setAttribute('disabled', '');
 			palette.style.visibility="visible";
 		} else {
 			resetTable();
 			bouton.classList.toggle('btn-generator');
 			bouton.textContent="Générer le tableau";
-			inputLignes.removeAttribute("disabled", "");
-			inputColonnes.removeAttribute("disabled", "");
+			linesInput.removeAttribute("disabled", "");
+			columnsInput.removeAttribute("disabled", "");
 			palette.style.visibility="hidden";
+			linesInput.value = " ";
+			columnsInput.value = " "
 		}
 	} else  {
 		controlerSaisie();
@@ -28,12 +30,12 @@ bouton.addEventListener('click', function () {
 })
 
 function controlerSaisie() {
-	if (inputLignes.value < 2 || inputLignes.value > 30 || inputLignes === " " ) {
+	if (linesInput.value < 2 || linesInput.value > 30 || linesInput === " " ) {
 		inputLignes.value = " ";
-		inputLignes.focus();
+		linesInput.focus();
 		return false;
-	} else if (inputColonnes.value < 2 || inputColonnes.value > 60  || inputColonnes === " ") {
-		inputColonnes.value = " ";
+	} else if (columnsInput.value < 2 || columnsInput.value > 60  || columnsInput === " ") {
+		columnsInput.value = " ";
 		inputColonnes.focus();
 		return false;
 	}
@@ -42,11 +44,11 @@ function controlerSaisie() {
 
 function createTable() {
 	const table = document.createElement('table');	
-	for (let i = 0; i < inputLignes.value; i++) {
+	for (let i = 0; i < linesInput.value; i++) {
 		let rows = document.createElement("tr");
 		table.appendChild(rows);
 	
-		for (let j = 0; j < inputColonnes.value; j++) {
+		for (let j = 0; j < columnsInput.value; j++) {
 			let columns = document.createElement("td");
 			columns.setAttribute('onclick', 'setColor(this)');
 			rows.appendChild(columns);
