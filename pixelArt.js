@@ -30,7 +30,7 @@ bouton.addEventListener('click', function () {
 })
 
 function controlerSaisie() {
-	if (linesInput.value < 2 || linesInput.value > 30 || linesInput === " " ) {
+	if (linesInput.value < 2 || linesInput.value > 60 || linesInput === " " ) {
 		inputLignes.value = " ";
 		linesInput.focus();
 		return false;
